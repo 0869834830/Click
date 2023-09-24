@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/css.css">
+    <title>Click zô</title>
+</head>
+<body>
+    <div class="imageBlock   ">
+        <img class="image  " src="./assets/image/383294211_278844178394584_6068141700317543558_n.jpg" alt="">
+    </div>
+    <audio id="audio" src="./assets/music/Am-thanh-tieng-cuoi-hahaha-PewPew-www_tiengdong_com.mp3"></audio>
+    <div class="btnBlock">
+        <button class="btn-shine">
+            <span>NHẤN VÔ NHÓC</span>
+        </button>
+    </div>
+    <script>
+        var check=true
+        var btnBlock=document.querySelector('.btn-shine')
+        var img=document.querySelector('.imageBlock')
+        btnBlock.onclick = function()
+        {
+            img.classList.add('show')
+            if(check){
+                document.querySelector('#audio').play();
+                check=false
+            }
+            else{
+                document.querySelector('#audio').pause();
+                check=true
+            }
+        }
+    </script>
+</body>
+</html>
